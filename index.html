@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Restore The Signal</title>
   <link href="https://db.onlinewebfonts.com/c/572a2d40c1cb6e1049aa231ee432e834?family=Shne+Breit" rel="stylesheet">
   <link href="https://db.onlinewebfonts.com/c/289b52b75190274b4e20f0987ef13edd?family=Sohne" rel="stylesheet">
@@ -34,6 +34,7 @@
       left: -63px;
       top: -271px;
       background: url(image.png);
+      background-size: cover;
       filter: blur(7.4px);
     }
 
@@ -213,7 +214,7 @@
       slide.style.transform = `scale(${scale})`;
       document.body.style.height = (1080 * scale) + 'px';
     }
-    scaleSlide();
+    window.addEventListener('load', scaleSlide);
     window.addEventListener('resize', scaleSlide);
   </script>
 </body>
